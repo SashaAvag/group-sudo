@@ -1,15 +1,25 @@
 #include <iostream>
 #include <math.h>
 
-class Point {
+class  Point {
     private:
         float x;
         float y;
     public:
-        Point (float x, float y)
+        Point (float x = 0, float y = 0)
         {
             this->x = x;
             this->y = y;
+        }
+        void setX (int x) {
+            this->x = x;
+        }
+        void setY (int y) {
+            this->y = y;
+        }
+        Point (const Point& p){
+            x = p.x;
+            y = p.y;
         }
         float getX () {
             return x;
@@ -17,48 +27,41 @@ class Point {
         float getY () {
             return y;
         }
+        virtual void foo() {
+            std::cout << "Point" << std::endl;
+        }
+        void boo() {
+            std::cout << "Point" << std::endl;
+        }
        ~Point (){};
 };
 class Triangle: public Point {
     private:
-        float x1;
-        float y1;
-        float x2;
-        float y2;
+        Point a,b;
     public:
-        Triangle (float x1 = 0, float y1 = 0, float x2 = 0, float y2 = 0, float x = 0, float y = 0)
-        :Point( x, y)
-        {
-            this->x1 = x1;
-            this->y1 = y1;
-            this->x2 = x2;
-            this->y2 = y2;
-        }
-        float getX1 () {
-            return x1;
-        }
-        float getY1 () {
-            return y1;
-        }
-        float getX2 () {
-            return x2;
-        }
-        float getY2 () {
-            return y2;
-        }
+        Triangle (Point a,Point b,Point c)
+        :Point(c),a(a), b(b)
+        {}
+
         float sideA () {
-            return sqrt(pow(getX2() - getX(), 2) + pow(getY2() - getY(), 2));
+            return sqrt(pow(b.getX() - getX(), 2) + pow(b.getY() - getY(), 2));
         }
         float sideB () {
-            return sqrt(pow(getX1() - getX(), 2) + pow(getY1() - getY(), 2));
+            return sqrt(pow(a.getX() - getX(), 2) + pow(a.getY() - getY(), 2));
         }
         float sideC () {
-            return sqrt(pow(getX2() - getX1(), 2) + pow(getY2() - getY1(), 2));
+            return sqrt(pow(b.getX() - a.getX(), 2) + pow(b.getY() - a.getY(), 2));
         }
         void printTr () {
             float par = sideA() + sideB() + sideC();
             std::cout << "Paragic of Triangle: " << par <<std::endl;
             std::cout << "The area of Triangle "<< sqrt( par * (par-sideA()) * (par - sideB()) * (par - sideC())) <<std::endl;
+        }
+        virtual void foo() {
+            std::cout << "Triangle" << std::endl;
+        }
+        void boo() {
+            std::cout << "Triangle" << std::endl;
         }
         ~Triangle(){};
 
@@ -66,61 +69,45 @@ class Triangle: public Point {
 
 class Line : Point {
     private:
-        float x3, y3;
+        Point a;
     public:
-        Line (float x = 0, float y = 0, float x3 = 0, float y3 = 0) 
-            :Point(x,y)
-            , x3(x3)
-            , y3(y3)
+        Line (Point c,Point a) 
+            :Point(c), a(a)
         {}
-        ~Line() {}
-
-        float getX3() {
-            return x3;
-        }
-        float getY3() {
-            return y3;
-        }
         float getLine() {
-            return  sqrt( pow(getX()-getX3(),2) + pow(getY()-getY3(),2) );
+            return  sqrt( pow(getX()-a.getX(),2) + pow(getY()-getY(),2) );
         }
         void printLn() {
             std::cout << "The size of line: " << getLine() << std::endl;
+
             float k = getY() / getX();
-            for (int i = getX(); i <= getX3(); i++) {
-                std::cout <<"x = "<<  i << ", y = " << k * i << std::endl;
+            for (int i = getX(); i <= a.getX(); i++) {
+                float b = getY() - getX() * k;
+                std::cout <<"x = "<<  i << ", y = " << k * i << " b = " << b << std::endl;
             }
         }
+        ~Line() {}
+
 };
 class Rectangle: public Point {
     private:
-        float x3;
-        float y3;
+        Point b;
     public:
-        Rectangle (float x3 = 0, float y3 = 0,float x = 0, float y = 0)
-        :Point(x,y)
-        {
-            this->x3 = x3;
-            this->y3 = y3;
-        }
-        float getX3 () {
-            return x3;
-        }
-        float getY3 () {
-            return y3;
-        }
+        Rectangle (Point c, Point b)
+        :Point(c),b(b)
+        {}
         float sideA () {
-            if ((getY3() - getY()) > 0){
-                return (getY3() - getY());
+            if ((b.getY() - getY()) > 0){
+                return (b.getY() - getY());
             }else {
-                return ((getY() -getY3()));
+                return ((getY() -b.getY()));
             }
         }
         float sideB () {
-            if ((getX3() - getX()) > 0){
-                return (getX3() - getX());
+            if ((b.getX() - getX()) > 0){
+                return (b.getX() - getX());
             }else {
-                return ((getX() -getX3()));
+                return ((getX() -b.getX()));
             }
         }
         void printRec() {
