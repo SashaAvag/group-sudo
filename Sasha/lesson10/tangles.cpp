@@ -81,8 +81,8 @@ class Line : Point {
             std::cout << "The size of line: " << getLine() << std::endl;
 
             float k = getY() / getX();
+            float b = getY() - getX() * k;
             for (int i = getX(); i <= a.getX(); i++) {
-                float b = getY() - getX() * k;
                 std::cout <<"x = "<<  i << ", y = " << k * i << " b = " << b << std::endl;
             }
         }

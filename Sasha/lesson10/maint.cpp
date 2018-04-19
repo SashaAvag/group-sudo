@@ -1,5 +1,5 @@
 #include <iostream>
-#include "tangle.cpp"
+#include "tangles.cpp"
 
 int main () {
     std::cout << "Enter 3 coordinates x and y  " << std::endl;
