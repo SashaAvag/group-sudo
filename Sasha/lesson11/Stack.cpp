@@ -35,19 +35,22 @@ class Stack {
             delete []arr;
         }
         void push() {
-	        while (!isFull()) {
+	        if (!isFull()) {
                 int a;
                 std::cout << "Input number : ";
                 std::cin >> a;
                 arr[++top] = a;
+            } 
+            else{
+                std::cout << "stack is Full! \n";
             }
         }
         int pop() {
-            if (size() >= 0) {
+            if (!isEmpty()) {
                 return arr[top--];
             }
             else {
-                std::cout << "Stack is empty!" <<std::endl;
+                std::cout << "Stack is Empty! \n";
                 return -1;
             }
         }
@@ -56,11 +59,11 @@ class Stack {
                 std::cout << "Stack is empty" <<std::endl;
             }
             else {
-                while (top != -1) {
-                    std::cout << arr[top] << " ";
-                    top --;
-                }
-                std::cout << '\n';
+                    while (top != -1) {
+                        std::cout << arr[top] << " ";
+                        top --;
+                    }
+                    std::cout << '\n';
             }
         }
 };

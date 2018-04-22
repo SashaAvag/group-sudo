@@ -6,13 +6,16 @@ int main() {
     std::cout << "Input the size of stack : ";
     std::cin >> n;
     Stack st(n);
-    int a;
-    st.push();
-    st.print ();
-    while (!st.isEmpty()) {
-        std::cout << st.pop() << " , ";
+    while (!st.isFull()) {
+        st.push();
     }
     st.print ();
+    std::cout << st.pop() << std::endl;
+    std::cout << st.pop() << std::endl;
+    st.push();
+    st.push();
+    st.print();
+
     std::cout << std::endl;
     return 0;
 }
