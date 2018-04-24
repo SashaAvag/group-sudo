@@ -7,8 +7,12 @@ Vector::Vector (ul n) {
         arr = new int [n * 2];
 }
 Vector::Vector (const Vector& p ) {
+        this->n = p.n;
+        this->arr = new int[n];
         n = p.n;
-        arr = p.arr;
+        for (int i = 0; i < n; i ++) {
+            arr[i] = p.arr[i];
+        }
 }
 Vector::~Vector (){
         delete []arr;
@@ -22,10 +26,10 @@ bool Vector::isEmpty () {
 bool Vector::isFull() {
         return size() == n;
 }
-int Vector::getFirst () {
+int Vector::getLast () {
         return arr[top];
 }
-int Vector::getLast () {
+int Vector::getFirst () {
         return arr[0];
 }
 void Vector::push (int x) {
@@ -41,7 +45,7 @@ void Vector::pop () {
         }else {
             for (int i = 0; i <= top; i++) {
                 if (i == top){
-                    top = i -1;
+                    top = i - 1;
                     break;
                 }
                 arr [i] = arr [i + 1];
@@ -75,7 +79,6 @@ void Vector::print() {
             }
             std::cout << "\n";
         }
-            
 }
 int Vector::operator[] (unsigned int in) {
     if (in >= 0 && in <= top){
