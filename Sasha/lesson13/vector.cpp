@@ -1,7 +1,7 @@
 #include <iostream>
 #include "vector.h"
 
-Vector::Vector (ul n) {
+Vector::Vector (unsigned long int  n) {
         this->n = n;
         top = -1;
         arr = new int [n * 2];
@@ -61,12 +61,13 @@ void Vector::resize(int m) {
         }
         else if ( m > n ) {
             n = m;
-            _arr = new int [n * 2];
+            int *_arr = new int [n * 2];
             for (int i = 0; i <= top; i++){
                 _arr[i] = arr[i];
             }
             delete []arr;
             arr = _arr;
+            delete []_arr;
         }
 }
 void Vector::print() {
@@ -80,7 +81,7 @@ void Vector::print() {
             std::cout << "\n";
         }
 }
-int Vector::operator[] (unsigned int in) {
+int& Vector::operator[] (unsigned int in) {
     if (in >= 0 && in <= top){
         return arr[in];
     }
@@ -96,4 +97,12 @@ void Vector::remove (unsigned int in ) {
             arr[i] = arr[i + 1];
         }
     }
+}
+void Vector::insert (unsigned int index,int x) {
+    if (index >=0 && index <= top) {
+        arr[index] = x;
+    }else {
+        std::cout << "Error! \n";
+    }
+    
 }

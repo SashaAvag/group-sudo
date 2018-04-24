@@ -5,7 +5,6 @@ class Vector {
         typedef unsigned long int ul;
         ul n;
         int *arr;
-        int *_arr;
         int top;
     public:
         Vector(ul n = 0);
@@ -20,7 +19,8 @@ class Vector {
         void pop();
         void resize(int m);
         void print();
-        int operator[] (unsigned int in);
+        void insert(unsigned int index,int x);
+        int& operator[] (unsigned int in);
         void remove (int unsigned in);
     
 };

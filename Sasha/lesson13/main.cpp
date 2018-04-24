@@ -30,6 +30,7 @@ int main () {
     std::cout << "Enter index for removing element: ";
     std::cin >> n;
     v.remove (n);
+    v.insert (3,15);
     v.print();
     return 0;
 }
