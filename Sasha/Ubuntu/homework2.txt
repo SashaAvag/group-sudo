@@ -1,0 +1,21 @@
+Homework2
+_________
+
+1)Finding files (different types)
+_________________________________
+mkdir dir
+cd dir
+touch a.txt b.txt c.jpg d.jpg
+mkdir indir
+cd indir 
+touch e.txt f,jpg
+find  /dir/ -type f -regex ".*\.\(txt\|jpg\)"
+
+2)Changing and creatin system file partitions
+_____________________________________________
+sudo apt-get install gparted
+sudo gparted
+/* inside I resize one of my ext4 patition and create new partition */
+
+
+
