@@ -1,0 +1,79 @@
+       Homeworks
+      ___________
+
+1) Create swap partition
+________________________
+sudo fallocate -l 500M /swapik
+sudo chmod 600 /swapik
+sudo mkswap /swapik
+sudo swapon /swapik
+sudo swapon -s
+sudo vim /etc/fstab
+(write in fstab) # /swapik none swap sw 0 0
+sudo apt-get install htop
+htop
+sudo swapoff /swapik
+
+2)Boot process
+______________
+cd /var/tmp
+touch script.sh
+vim 
+  #!bin/bash 
+  echo "Hello world!  'date' " >>/var/tmp/script.out
+
+
+
+3) Run level 
+Who -r
+init 6
+sudo :d:4:initdefault:
+sudo apt-get install sysv-re-conf
+sysv-re-conf
+sudo vim /etc/init/re -sysinit-conf
+(write in re-sysinit-conf) env DEFAULT-RUNLEVEL = 4
+reboot
+
+4)Grep sort
+___________
+dir/a.txt:Hello world
+dir/d1/n.txt:Hello Nona
+dir/d1/s.txt:Hello Sasha
+dir/d2/c.txt:Hello
+dir/k.txt:Hello students
+grep Hello -r dir | sort > sort.txt
+
+5)Creating users and groups
+___________________________
+sudo adduser user1
+sudo adduser user2
+sudo adduser user3
+sudo addgroup group1
+sudo addgroup group2
+sudo addgroup group3
+sudo usermod -a -G group1 user1
+sudo usermod -a -G group1 user2
+sudo usermod -a -G group2 user2
+sudo usermod -a -G group2 user3
+sudo usermod -a -G group3 user1
+sudo usermod -a -G group3 user2
+sudo usermod -a -G group3 user3
+mkdir dir1 dir2
+sudo chown user1:group1 dir1
+sudo chown user2:group2 dir1
+sudo chown user3:group3 dir1
+sudo chown user1:group1 dir2
+sudo chown user2:group2 dir2
+sudo chown user3:group3 dir2
+sudo chgrp group1 dir1
+sudo chmod 774 dir1
+sudo chgrp group2 dir1
+sudo chmod 770 dir1
+sudo chgrp group3 dir1
+sudo chmod 764 dir1
+sudo chgrp group1 dir2
+sudo chmod 766 dir2
+sudo chgrp group2 dir2
+sudo chmod 744 dir2
+sudo chgrp group3 dir2
+sudo chmod 777 dir2
