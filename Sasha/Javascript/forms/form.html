@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Form</title>
+</head>
+<body>
+	<header>
+		<select>
+  			<option>Day</option>
+  			<option value = "1">1</option>
+  			<option value = "2">2</option>
+  			<option value = "3">3</option>
+  			<option value = "4">4</option>
+  			<option value = "5">5</option>
+  			<option value = "6">6</option>
+		</select>
+		<select>
+			<option>Month</option>
+			<option value = "7">1</option>
+			<option value = "8">2</option>
+			<option value = "9">3</option>
+			<option value = "10">4</option>
+			<option value = "11">5</option>
+			<option value = "12">6</option>
+		</select>
+		<select>
+			<option>Year</option>
+			<option value = "13">2016</option>
+			<option value = "14">2017</option>
+			<option value = "15">2018</option>
+			<option value = "16">2019</option>
+		</select>
+	</header> 
+	<div class = "container">
+		<form  id="send" action="http://www.facebook.com" method="post" target="_blank">
+			<input type="text" name="name" placeholder="Input you name" >
+			<input type="password" name="password" placeholder="Input password">
+			<input type="email" name="email" placeholder="Input your email" >
+			<span><input id="yes" type="checkbox" name="answer" ><label for="yes">Agree</label></span>
+			<button form="send" type="submit">Send</button>
+		</form>
+	</div>	
+
+		<marquee direction="right">Registration for facebook new account</marquee>	
+</body>
+</html>
