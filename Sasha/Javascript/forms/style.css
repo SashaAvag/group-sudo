@@ -24,8 +24,9 @@ form {
 	left:50%;
 	margin-top:-100px;
 	margin-left:-100px; 
-	border:2px solid blue;
-	background-color: #00FFFF;
+	border:2px solid #008ae6;
+	background-color: #80ccff;
+	border-radius: 10px;
 	padding:15px;
 }
 form input{
@@ -44,24 +45,24 @@ input:focus{
 	width: 50px;
 	margin-left: -140px;
 }
-button{
+.container button{
 	position: absolute;
 	bottom:15px;
 	right:15px;
 	padding:5px 10px;
-	background-color:#10e418;
+	background-color:#ccebff;
 	border-radius: 5px;
-	border-color: #10e418 ;
+	border-color: #ccebff ;
 }
-button:active{
-	background-color: #a90d42;
-	border-color: #a90d42 ;
+.container button:active{
+	background-color: #003c66;
+	border-color: #003c66 ;
 }
 header{
 	width:800px;
 	height:100px;
 	margin:auto;
-	background: -webkit-linear-gradient(top, black 0%,#dbdbdb 50%,#d1d1d1 20%,#fefefe 10%);
+	background: -webkit-linear-gradient(top, black 0%,#dbdbdb 50%,#d1d1d1 20%,#fefefe 50%);
 	text-align: center;
 }
 select{
@@ -71,11 +72,45 @@ select{
 
 marquee{
 	position: fixed;
-	top:810px;
-	width:1200px;
+	bottom:0;
+	width:100%;
 	padding:20px;
 	margin:auto;
 	text-align: center;
-	background-color: aqua;
+	background-color: #80ccff;
 	color:red;
+}
+
+.button {
+    background-color: grey;
+    border-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.menu {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.list {
+    display: none;
+    background-color: grey;
+    border-radius: 8px;
+}
+
+.list a {
+
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+}
+.list a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu:hover .list {
+    display: block;
 }
