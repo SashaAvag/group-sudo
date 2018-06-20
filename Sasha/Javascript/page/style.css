@@ -107,6 +107,7 @@ button:hover{
 
 
 .user {
+	margin-bottom: 20px;
 	background-color: #ECECEC;
 	text-align: center;
 	width:inherit;
@@ -140,23 +141,19 @@ button:hover{
 	font-weight:300;
 	color:#3F92F1;
 }
+.pics{
+	width:inherit;
+	display:flex;
+	justify-content:space-around;
+	flex-wrap:wrap;
 
+}
 img{
-	width:15%;
-	height:15%;
+	margin:0px 45px;
+	width:150px;
+	height:150px;
 	border:3px solid #E8A342;
 	border-radius: 100%;
-
-}
-.top img{
-	margin:5% 3% 0px 3%;
-}
-.top, .bottom {
-	text-align: center;
-	background-color: 
-}
-.bottom img:nth-child(2) {
-	margin:0% 7%;
 
 }
 img:hover{
@@ -165,22 +162,27 @@ img:hover{
 	border-color:#3F92F1;
 }
  @media screen and (max-width: 500px ){
- 	 .number:last-child, .top img:last-child , .bottom img:last-child {
+ 	.left{
+ 		display: none;
+ 	}
+ 	.right{
+ 		width: 100%;
+ 	}
+ 	 .number:last-child, .pics img:last-child , .pics img:first-child{
  	 	display: none;
  	 }
  	 .number {
- 	 	margin:5% 3%;
+ 	 	margin:5% 2%;
  	 }
- 	 .bottom img:first-child {
- 	 	margin-left:  7%;
+ 	 img{
+ 	 	margin:0px 15px;
+ 	 	width:60px;
+ 	 	height:60px;
  	 }
  }
 
  @media screen and (max-width: 1024px) {
- 	 .number:last-child, .top img:last-child {
+ 	 .number:last-child,  img:last-child {
  	 		display: none;
  	 }
- 	 .bottom img:nth-child(2){
-		margin:1% 7% 0px 7%;
- 	}
  }
