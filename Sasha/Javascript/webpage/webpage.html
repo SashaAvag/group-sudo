@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="webpage.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 	<meta charset="utf-8" name="viewport" content="width=device-width"/>
 	<title>Webpage</title>
 </head>
@@ -27,23 +27,22 @@
 					<h1>Ստեփանակերտի N11 Դպրոց</h1>
 					<p>Մենք կերտում ենք մեր ապագա ղեկավարներին</p>
 				</div>
-				<div class="icon">
-					<a href=""><i class="fa fa-files-o"></i></a>
-					<a href=""><i class="fa fa-magic"></i></a>
-					<a href=""><i class="fa fa-cogs"></i></a>
-				</div>
 			</div>
 		</div>
 		<div class="text-container">
 			<div class="name">
+				<div class="a"><a href=""><i class="fa fa-files-o"></i></a></div>
 				<h4>Գլխանուն</h4>
 				<p>The Memorial Complex, built in honor of the 22,000 inhabitants of Artsakh who died during WWII, is centered around a 21 meter high obelisk in the center. </p>
 			</div>
 			<div class="name">
+
+				<div class="a"><a href=""><i class="fa fa-magic"></i></a></div>
 				<h4>Գլխանուն</h4>
 				<p>The Memorial Complex, built in honor of the 22,000 inhabitants of Artsakh who died during WWII, is centered around a 21 meter high obelisk in the center. </p>
 			</div>
 			<div class="name">
+				<div class="a"><a href=""><i class="fa fa-cogs"></i></a></div>
 				<h4>Գլխանուն</h4>
 				<p>The Memorial Complex, built in honor of the 22,000 inhabitants of Artsakh who died during WWII, is centered around a 21 meter high obelisk in the center.  </p>
 			</div>
@@ -93,32 +92,66 @@
 			<h2>Ի՞Նչ են ասում մեր մասին</h2>
 			<p>Այստեղ կլինեն աշակերտների ծնողների խոսքերը դպրոցի մասին</p>
 		</div>
-		<div class="fifth-page">
+		<div class="comment">
 			<div class="table-2">
 				<i class="fa fa-quote-right"></i>
 				<p>Ես շատ գոհ եմ N11 դպրոցից, քանի որ ամեն օր զգում եմ, թե ինչօես է իմ տղան ստանում նոր գիտելիքներ ու հաճույքով հաճախում դպրոց</p>
 				<div class="user"></div>
-					<p  id="username">Արամ Արամյան</p>
-					<em>Աշակերտի անուն</em>
+				<p class="username">Արամ Արամյան</p>
+				<div  class="italic">Աշակերտի անուն</div>
 			</div>
 			<div class="table-2">
 				<i class="fa fa-quote-right"></i>
 				<p>Do you sometimes have the feeling taht you're running into the same obstacles over and over again? Many of my conflicts have the same feel to them,like "Hey, I think I've been here before,"</p>
 				<div class="user"></div>
-					<p  id="username">Արամ Արամյան</p>
-					<em>Աշակերտի անուն</em>
+					<p  class="username">Արամ Արամյան</p>
+					<div class="italic">Աշակերտի անուն</div>
 			</div>
 			<div class="table-2">
 				<i class="fa fa-quote-right"></i>
 				<p>Do you sometimes have the feeling taht you're running into the same obstacles over and over again? Many of my conflicts have the same feel to them,like "Hey, I think I've been here before,"</p>
 				<div class="user"></div>
-				<p id="username">Արամ Արամյան</p>
-				<em>Աշակերտի անուն</em>
+				<p class="username">Արամ Արամյան</p>
+				<div class="italic">Աշակերտի անուն</div>
 			</div>
 		</div>
-		<div class="form-page">
-			
-		</div>	
 	</div>
+		<div class="form-page">
+			<div class="dark-block">	
+				<div class="middle">
+					<div class="form-header">
+						<h1> ԳՐԵՔ ՄԵԶ </h1>
+						<p>Եթե ունեք հարց կամ առաջարկություն, ապա գրեք մեզ հենց հիմա</p>
+					</div>
+					<form action="" >
+						<div class="first-line">
+							<div class="your-name">
+								<p>YOUR NAME (REQUIRED)</p>
+								<input />
+							</div>
+							<div class="your-email">
+								<p>YOUR EMAIL (REQUIRED)</p>
+								<input />
+							</div>
+						</div>
+						<div class="second-line">
+							<p>SUBJECT</p>
+							<input />
+						</div>
+						<div class="third-line">
+							<p>YOUR MESSAGE</p>
+							<textarea></textarea>
+						</div>
+						<div class="last-line">
+							<button>ՈՒՂԱՐԿԵԼ</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+		<footer>
+			<p>  © 2018 N11 School. Built using HTML and CSS</p>
+		</footer>
+
 </body>
 </html>

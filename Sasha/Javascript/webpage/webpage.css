@@ -35,9 +35,8 @@ header {
 	width:100vw;
 }
 .dark-block{
-	position: relative;
 	display: inline-block;
-	height:100%;
+	height:inherit;
 	width:inherit;
 	background-color:rgba(0,0,0,0.6);
 }
@@ -47,21 +46,12 @@ header {
 	text-align: center;
 	margin-top:10%;
 }
-.icon{
-	bottom:-5%;
-	width: 100%;
-	position: absolute;
-	display: flex;
-	justify-content:space-around;
-}
-.icon a {
+.a a {
+	z-index: 3;
 	box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
 	font-size:30px;
 	width:80px;
 	height:80px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
 	color:#FFFFFF;
 	border-radius: 100%;
 	border:1px solid #3795F7;
@@ -69,11 +59,25 @@ header {
 	text-decoration: none;
 
 }
+.a i {
+	display: flex;
+	justify-content:center;
+	margin-top: 25px;
+}
+.a{
+
+	display: flex;
+	justify-content:space-around;
+	align-items:center;
+	margin-bottom:50px;
+}
 .text-container {
+	margin-top:-95px;
 	margin-bottom: 10%;
 	display:flex;
 	justify-content:space-around;
 	align-content:center;
+	flex-wrap:wrap;
 
 }
 .name{
@@ -142,7 +146,7 @@ header {
 	color:#666873;
 	width: 40%;
 	line-height: 30px;
-	margin:70px auto;
+	margin:50px auto;
 	text-align: center;
 }
 
@@ -183,17 +187,19 @@ header {
 	color:#969AB0;
 }
 
-.fifth-page{
-	display:flex;
-	justify-content:space-around;
-	align-content:center;
+.comment {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
 	flex-wrap:wrap;
-	margin:auto;
 }
 .table-2 {
+	margin: 50px auto;
+	display: table;
 	color:#969AB0;
 	border:1px solid #969AB0 ;
-	width: 20%;
+	width: 30%;
+	height:350px;
 	padding:10px;
 	text-align: center;
 
@@ -201,20 +207,21 @@ header {
 .table-2 i{
 	color:aqua;
 	font-size:24px;
-	margin-bottom:20px;
+	margin:20px auto;
 }
-.table-2>em {
-	margin-top: 50px;
-	width: 20%;
-}
+
 
 .table-2 p {
 	width: 80%;
-	margin: auto;
+	margin: 0 auto;
 }
-#username {
+.username {
 	color:#666873;
 	font-weight: 800;
+}
+.italic{
+	font-style: italic;
+	margin-top:15px;
 }
 .user{
 	margin: 15px auto;
@@ -226,38 +233,98 @@ header {
 	height: 100px;
 	border-radius: 100%;
 }
+.form-page{
+	width: 100vw;
+	background-image:url(img/form.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size:cover;
+}
 
+.middle{
+	margin-top:20px;
+	text-align: center;
+}
+.form-header{
+	color:#FFFFFF;
+	margin-bottom: 3%;
 
+}
+form {
+	padding:30px;
+	border:1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+	width: 50%;
+	margin: 0px auto;
+	border-radius: 5px;
+	font-size: 12px;
+	margin-bottom: 30%;
 
+}
+.first-line {
+	width:100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-content:center;
+	margin-bottom: 15px;
+}
+.your-email , .your-name {
+	width:45%;
+	text-align: left;
+}
+.first-line input {
+	width: 100%;
+ 	height: 30px;
+	margin-top:5px;
+	text-align: center;
+	border-radius: 5px;
+}
+￼
 
+.second-line {
+	margin-bottom: 15px;
+	text-align: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.second-line input{
+	height: 30px;
+	display: flex;
+	justify-content:center;
+	margin-top:5px;
+	border-radius: 5px;
+	width:100%;
+}
+.third-line {
+	text-align: left;
+	margin-bottom: 15px;
+}
+textarea {
+	border-radius: 5px;
+	margin-top:5px;
+	width: 100%;
+	height:100px;
+}
+.last-line {
+	text-align: right;
+}
+.last-line button {
+	padding:5px 10px;
+	background-color: #3795F7;
+	border-radius: 5px;
+	border-color: #3795F7;
+}
+footer{
+	width: 100vw;
+	background-color: #FFFFFF;
+}
+footer p{
+	text-align: center;
+	margin:30px auto;
+	color:#969AB0;
+}
 
 
 @media screen and (max-width: 500px){
@@ -270,5 +337,11 @@ header {
 	.user{
 		display: none;
 	}
-}
+	.first-line{
+		display: table;
+		width: 100%;
+	}
+	.your-email , .your-name {
+		width:100%;
+	} 
 }
