@@ -1,0 +1,186 @@
+* {
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #515453;	
+}
+#modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.5);
+	transform: scale(1.2);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+#modal-content {
+	background-color: #A9E0A5;
+	width: 30%;
+	padding: 20px;
+	border-radius: 5px;
+	border: 5px solid  #ccc;
+}
+.surname1, .name1 {
+	width: 45%;
+	display: inline-block;
+}
+.surname-name {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.surname-name input {
+	width: 100%;
+	border: 1px solid #ccc;
+	height: 30px;
+	font-size: 20px;
+	padding: 0 5px;
+	color: #515453;
+	border-radius: 5px;
+}
+.surname-name input:focus {
+	border: 1px solid #aaa;
+}
+#modal p {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	padding: 10px 0;
+	font-style: italic;
+}
+.gender {
+	margin-bottom: 20px;
+}
+.gender label{
+	margin-right: 10px;
+	font-size: 16px;
+}
+.gender label:hover,
+.gender input:hover {
+	cursor: pointer;
+}
+.gender input {
+	margin-right: 5px;
+}
+.button-holder {
+	display: flex;
+	flex-direction: row-reverse;
+}
+#save-info, #save-info2 {
+	width: 70px;
+	color: #515453;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-weight: 600;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 7px 0;
+	font-size: 11px;
+	box-shadow: inset 1px -3px 20px 0px #ccc;
+	text-align: center;
+}
+#save-info:hover, #save-info2:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+.show-modal {
+	opacity: 1;
+	transform: scale(1);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.header {
+	background-color: #A9E0A5;
+	color: #ffffff;
+	width: 100vw;
+	margin-bottom: 50px;
+	padding: 20px 0;
+}
+.header .block {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row-reverse;
+}
+#greeting {
+	font-size: 20px;
+	font-weight: 600;
+}
+.footer {
+	position: fixed;
+	background-color: #A9E0A5;
+	padding: 20px 0;
+	text-align: center;
+	width: 100vw;
+	bottom: 0;
+}
+.container {
+	width: 100vw;
+}
+.data {
+	margin: 0 auto;
+	width: 70%;
+}
+.data .info{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.data input {
+	width: calc(70% / 3);
+	height: 30px;
+	margin: 10px 0;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 18px;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	border-radius: 5px;
+	background-color: #e5e8e8;
+}
+.data input:focus,
+.data input:hover {
+	background-color: #f1f1f1;
+	border-bottom: 2px solid #aaa;
+}
+#save-info2 {
+	margin: 10px 0 20px 0;
+}
+#saved-forms {
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #9a9c9a;
+	padding: 20px;
+	justify-content: center;
+}/*
+@media screen and (max-width: 1024px){
+	#modal p {
+		font-size: 20px;
+	}
+	.surname-name input {
+		font-size: 22px;
+		padding-left: 10px;
+	}
+	.gender label{
+		font-size: 23px;
+	}
+	input[type=radio] {
+		width: 1.5em;
+		height: 1.5em;
+	}
+	#save-info {
+		font-size: 16px;
+	}
+}*/
