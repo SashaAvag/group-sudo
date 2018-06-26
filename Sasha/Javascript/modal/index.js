@@ -20,6 +20,7 @@ function init() {
 			gender = "Mr. ";
 		}
 		greeting.innerHTML = "Hi, " + gender + " " + name.value + " " + surname.value;
+		localStorage.setItem("name-surname", greeting.innerHTML);
 	}
 	var saveInfo2 = document.getElementById("save-info2");
 	var i = 0;
@@ -66,6 +67,14 @@ function init() {
 		window.localStorage.setItem("div"+h, JSON.stringify(div));
 		h++
 	 }
- 
+ 		var data = document.getElementsByClassName("data")[0];	
+    	function saveData(){
+	    	localStorage.setItem("name"+a, p1.innerHTML);
+	    	localStorage.setItem("surname"+a, p2.innerHTML);
+	    	localStorage.setItem("phone"+a, p3.innerHTML);
+	    	localStorage.setItem("country"+a, p4.innerHTML);
+	    	localStorage.setItem("city"+a, p5.innerHTML);
+	    	localStorage.setItem("address"+a, p6.innerHTML);
+    	}
 }
 window.onload = init;
