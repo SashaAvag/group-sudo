@@ -1,0 +1,57 @@
+.bgck-image {
+    background-image: url(../img/photo1.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.left-hand {
+    font-weight: 300;
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-size: 35px;
+}
+
+.left-hand span {
+    color: #ffc100;
+}
+
+.dark-block {
+    background-color: #000000;
+    opacity: 0.6;
+    height: inherit;
+}
+
+.bgck-image h1 {
+    font-size: 70px;
+    color: #f5efec;
+    text-align: center;
+}
+
+.bgck-image span {
+    color: #ffc100;
+}
+
+.arr {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 5px 30px;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.bgck-image p {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.arr i {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:500px) {
+    .header {
+        font-size: 45px !important;
+    }
+}
