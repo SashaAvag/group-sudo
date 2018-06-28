@@ -2,7 +2,6 @@
     background-image: url(../img/photo1.png);
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
 .left-hand {
@@ -49,7 +48,96 @@
     color: #ffffff;
     margin-top: 10px;
 }
+.block ol {
+    display: table;
+    width:300px;
+    list-style-type: none;
+    counter-reset: num; 
+}
+.block li::before {
+    content: counter(num) '. ';
+    counter-increment: num;
+    font-size: 20px;
+}
+.block{
+    border: 1px solid rgba(53, 52, 50, 0.3);
+    height: 450px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+h2 {
+    margin:50px 0px;
+    color: #1496d2;
+    font-family: Roboto;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+.image{
+    position: relative;
+}
+.text{
+    width: 90%;
+    height:30px;
+    transform: rotate(-5deg);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #353432;
+    color: #ffffff;
+    position: absolute;
+    bottom:20px;
+    right:0px;
+}
+.text:hover{
+    cursor: pointer;
+    background-color: #1496d2;
+    transform: rotate(5deg);
+}
+.page3{
+    background-image: url(../img/photo2.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+.page3 h2{
+    color:#ffc100;
+    padding-top:40px;
+}
+.page3{
+    color: #ffffff;
+    font-family: Roboto;
+}
+.page3 .yellow{
+    margin-top:-30px;
+    margin-bottom: 30px;
+    color:#ffc100;
+}
+.page3 ol {
+    list-style-type:circle;
+}
+h3{
+    margin:50px 0px;
+    color: #1496d2;
+    font-family: Roboto;
+    font-size: 42px;
+    text-transform: uppercase;
+}
+.page4{
+    background-image: url(../img/page4.png);
+    background-size: cover;
+    background-position: center;  
+}
+.bckg-color{
+    background-color: #1496d2;
+    opacity: 0.6;
+    height: inherit;
 
+}
+#img img:hover{
+    transform: rotate(15deg);
+}
+.page4{
+    color:#FFFFFF;
+}
 @media screen and (max-width:500px) {
     .header {
         font-size: 45px !important;
